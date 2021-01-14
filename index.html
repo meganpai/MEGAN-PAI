@@ -1,0 +1,1059 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MEGAN PAI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+
+
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script>
+  $(document).ready(function() {
+          var imageLinks = $('a[href$=".png"], a[href$=".jpg"], a[href$=".gif"], a[href$=".bmp"]');
+          if (imageLinks.children('img').length) {
+              imageLinks.children('img').each(function() {
+                  var currentTitle = $(this).attr('title');
+                  $(this).attr('title', currentTitle + ' (click to enlarge image)');
+              });
+              imageLinks.click(function(e) {
+                  e.preventDefault();
+                  $(this).children('img').toggleClass('expanded');
+              });
+          }
+      });
+</script>
+
+
+
+
+
+
+
+<style>
+/*
+.modal {
+  display:none;
+  position:fixed;
+  z-index:1;
+  padding-top:7px;
+  left:0;
+  top:0;
+  width:100%;
+}
+.modal-content {
+  margin-top:27px;
+  display:block;
+  width:80%;
+  max-width:700px;
+}
+.close {
+  position:absolute;
+  top:7px;
+  left:7px;
+  color:black;
+  font-size:17px;
+  font-weight:bold;
+}
+
+@media only screen and (max-width:700px) {
+  .modal-content {
+    width:100%;
+  }
+}
+*/
+
+
+.full-screen {
+  height:100%;
+}
+.flex-container {
+  display: flex;
+  flex-direction:row;
+  height:777px;
+  overflow:scroll;
+}
+/* .flex-container > div { */
+.home {
+  overflow:scroll;
+  flex: 0 0 auto;
+  width:975px;
+  padding:7px;
+}
+.graphic-design {
+  overflow:scroll;
+  flex: 0 0 auto;
+  width:450px;
+  padding:7px;
+}
+.photography {
+  overflow:scroll;
+  flex: 0 0 auto;
+  width:1111px;
+  padding:7px;
+}
+.film {
+  overflow:scroll;
+  flex: 0 0 auto;
+  width:1111px;
+  padding:7px;
+}
+.archive {
+  overflow:scroll;
+  flex: 0 0 auto;
+  width:450px;
+  padding:7px;
+}
+::-webkit-scrollbar {
+  width:0px;
+  background:transparent;
+}
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  margin-bottom:-27px;
+}
+body {
+  margin:0;
+}
+h1 {
+  font-family:"Avara";
+  font-style:italic;
+  font-size:17px;
+}
+h2 {
+  font-family:"Inter";
+  font-style:normal;
+  font-weight:normal;
+  font-size:17px;
+  margin-top:3px;
+  margin-bottom:33px;
+  color:black;
+}
+.title-exception {
+  margin-top:-60px;
+  margin-bottom:33px;
+}
+h3 {
+  font-family:"Helvetica";
+  font-style:normal;
+  font-weight:normal;
+  font-size:13px;
+}
+h4 {
+  font-family:"Helvetica";
+  font-weight:normal;
+  margin-top:17px;
+  margin-bottom:3px;
+}
+h5 {
+  font-family:"Helvetica";
+  font-weight:normal;
+  font-size:17px;
+  color:blue;
+  background-color:blue;
+  margin-top:77px;
+  margin-bottom:-15px;
+}
+.text {
+  font-family:"Inter";
+  font-weight:normal;
+  font-style:normal;
+  font-size:11px;
+  margin-top:0px;
+  color:black;
+}
+.caption {
+  font-family:"Inter";
+  font-size:11px;
+  color:black;
+  margin-top:-5px;
+  margin-bottom:17px;
+}
+a {
+  font-family:"inter";
+  font-size:11px;
+  color:grey;
+}
+mark {
+  color:white;
+  background-color:blue;
+}
+.photography-mark {
+  color:white;
+  background-color:magenta;
+}
+.film-mark {
+  color:white;
+  background-color:RGB(0,255,0);
+}
+.archive-mark {
+  color:white;
+  background-color:black;
+}
+.square {
+  width:37px;
+  height:37px;
+  background-color:blue;
+  margin-bottom:12px;
+  margin-top:5px;
+}
+.asterisk {
+  display:inline-flex;
+  font-family:"Times New Roman";
+  font-size:50px;
+  margin-bottom:-50px;
+  margin-top:33px;
+  color:black;
+  z-index:1;
+}
+.hidden {
+  display:inline-flex;
+  font-size:50px;
+  margin-bottom:-10px;
+  margin-top:-50px;
+  color:white;
+}
+</style>
+
+<body>
+<div class="flex-container">
+<div class="home">
+  <h1> <br> Megan Pai <br><br> 🐇 </h1>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <p class="text">For inquiries, please contact:
+    <br>
+    <a href="mailto:dear.mgn.pai@gmail.com" target="_blank">dear.mgn.pai@gmail.com</a>
+    <br><br>
+    <a href="https://www.instagram.com/mgnpai" target="_blank">ig</a>
+  </p>
+</div>
+<div>
+</div>
+<div  class="graphic-design">
+  <h2>Capsule</h2>
+  <h3 class="sticky"><mark>Print_Publication_2019__Princeton_NJ__5.5x8.5''__100_handbound_copies__</mark></h3>
+  <br><br>
+  <img src="Images/Capsule/*COVER.jpg" width="100%" id="enlarge01">
+
+
+<!--
+  <div id="myModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="large01">
+  </div>
+
+<script>
+var modal= document.getElementById("myModal");
+var img = document.getElementById("enlarge01");
+var modalImg = document.getElementById("large01");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+}
+
+var span = document.getElementsByClassName("close")[0];
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+</script>
+//
+-->
+
+
+  <p class="caption"><a href="Images/Capsule/Capsule_Issue0_Online" target="blank">PDF</a></p>
+  <p class="text">
+    CAPSULE was born out of a nucleus of creative isolation. Through a series of musical and artistic collisions, our orbits aligned in the vacuum of Princeton. The three of us shared a desire to channel our creative energies and passions—design, photography, writing, and art—into a concentrated project which we could then share with others. From conversations about sentient reactivity, cavities, and super entities, we arrived at CAPSULE.
+    <br><br>
+    CAPSULE is not a magazine, periodical, publication, journal, or newsletter, but rather precisely what the name suggests. It preserves the dynamic relationships between people and place. We document the stories of artists and their work, as we believe that self-identifying creatives have experiences which directly align with our mission. A place, defined as a space that has been modified/filled by/with people, occupies a central role in the process of the artist who occupies it. A symbiosis of person and place manifests as the artist generates content in reaction to what they experience.
+    <br><br>
+    We hope our work encourages greater mindfulness in perceiving and interacting with the spaces that surround our bodies. With the supersonic development of technology and the vast database of online media, our society has become increasingly desensitized to the alluring traces of brilliance in all things, blindly consuming images with haste. CAPSULE emerges as a counter-response to the contemporary state of media consumerism, to remind you (and ourselves) to appreciate actively. Allow this to inspire you to embrace life with greater vitality.
+  </p>
+  <img src="Images/Capsule/**COVER.jpg" width="100%">
+  <img src="Images/Capsule/**ABOUT.jpg" width="100%">
+  <img src="Images/Capsule/Capsule_1.jpg" width="100%">
+  <img src="Images/Capsule/Capsule_2.jpg" width="100%">
+  <img src="Images/Capsule/Capsule_3.jpg" width="100%">
+  <img src="Images/Capsule/Capsule_4.jpg" width="100%">
+  <img src="Images/Capsule/Capsule_5.jpg" width="100%">
+  <img src="Images/Capsule/Capsule_6.jpg" width="100%">
+  <img src="Images/Capsule/Capsule_7.jpg" width="100%">
+  <img src="Images/Capsule/Capsule_8.jpg" width="100%">
+  <img src="Images/Capsule/*INSIDE-COVER.jpg" width="100%">
+  <img src="Images/Capsule/*MIDDLE.jpg" width="100%">
+
+</div>
+<div class="graphic-design">
+  <h2>Order of Operations</h2>
+  <h3 class="sticky"><mark>Digital_Publication__2020__4.25x11''__255_pages______________________</mark></h3>
+  <br><br>
+  <img src="Images/Order-of-Operations/*COVER.png" width="100%">
+  <p class="text">Brief</p>
+  <p class="text">
+    Conduct a six-week study of the fundamental distinction between additive and subtractive color, as manifest by R-G-B and C-M-Y-K color models.
+  </p>
+  <p class="text">Response</p>
+  <p class="text">
+    A 255-page diary of investigations, starring C-M-Y colored materials imported into the R-G-B digital space. Each composition utilizes digital collaging techniques to display the effects of mixing subtractive soaps, wallets, and bottles, with additive shapes, text, and highlights. The iterative process yields increasingly complex results as the operations accumulate.
+  </p>
+  <img src="Images/Order-of-Operations/OoO-1.png" width="100%"></img>
+  <img src="Images/Order-of-Operations/OoO-2.png" width="100%"></img>
+  <img src="Images/Order-of-Operations/OoO-3.png" width="100%"></img>
+  <img src="Images/Order-of-Operations/OoO-4.png" width="100%"></img>
+  <img src="Images/Order-of-Operations/OoO-5.png" width="100%"></img>
+  <img src="Images/Order-of-Operations/OoO-6.png" width="100%"></img>
+  <img src="Images/Order-of-Operations/OoO-7.png" width="100%"></img>
+  <img src="Images/Order-of-Operations/OoO-8.png" width="100%"></img>
+  <img src="Images/Order-of-Operations/OoO-9.png" width="100%"></img>
+  <img src="Images/Order-of-Operations/OoO-10.png" width="100%"></img>
+  <img src="Images/Order-of-Operations/OoO-11.png" width="100%"></img>
+  <img src="Images/Order-of-Operations/OoO-12.png" width="100%"></img>
+  <img src="Images/Order-of-Operations/OoO-13.png" width="100%"></img>
+  <img src="Images/Order-of-Operations/OoO-14.png" width="100%"></img>
+  <img src="Images/Order-of-Operations/OoO-15.png" width="100%"></img>
+  <img src="Images/Order-of-Operations/OoO-16.png" width="100%"></img>
+  <img src="Images/Order-of-Operations/OoO-17.png" width="100%"></img>
+  <img src="Images/Order-of-Operations/OoO-18.png" width="100%"></img>
+  <img src="Images/Order-of-Operations/OoO-19.png" width="100%"></img>
+  <img src="Images/Order-of-Operations/OoO-20.png" width="100%"></img>
+  <img src="Images/Order-of-Operations/OoO-21.png" width="100%"></img>
+  <img src="Images/Order-of-Operations/OoO-22.png" width="100%"></img>
+  <img src="Images/Order-of-Operations/OoO-23.png" width="100%"></img>
+  <img src="Images/Order-of-Operations/OoO-24.png" width="100%"></img>
+  <img src="Images/Order-of-Operations/OoO-25.png" width="100%"></img>
+  <img src="Images/Order-of-Operations/OoO-26.png" width="100%"></img>
+  <img src="Images/Order-of-Operations/OoO-27.png" width="100%"></img>
+  <img src="Images/Order-of-Operations/OoO-28.png" width="100%"></img>
+  <img src="Images/Order-of-Operations/OoO-29.png" width="100%"></img>
+  <img src="Images/Order-of-Operations/OoO-30.png" width="100%"></img>
+  <img src="Images/Order-of-Operations/OoO-31.png" width="100%"></img>
+  <img src="Images/Order-of-Operations/OoO-32.png" width="100%"></img>
+  <img src="Images/Order-of-Operations/OoO-33.png" width="100%"></img>
+  <img src="Images/Order-of-Operations/OoO-34.png" width="100%"></img>
+  <img src="Images/Order-of-Operations/OoO-35.png" width="100%"></img>
+  <img src="Images/Order-of-Operations/OoO-36.png" width="100%"></img>
+  <img src="Images/Order-of-Operations/OoO-37.png" width="100%"></img>
+  <img src="Images/Order-of-Operations/OoO-38.png" width="100%"></img>
+  <img src="Images/Order-of-Operations/OoO-39.png" width="100%"></img>
+  <br><br>
+  <div class="square"></div>
+  <img src="Images/Order-of-Operations/255.png" width="100%"></img>
+  <p class="caption">Preview of 255 pages</p>
+
+</div>
+<div class="graphic-design">
+  <h2>Are You What You Eat?</h2>
+  <h3 class="sticky"><mark>Website__2020__Documentation of food-related experiments with <a href="victorguan.info" target="blank">Victor Guan</a></mark></h3>
+  <br><br>
+  <img src="Images/Are-You-What-You-Eat/a-u-w-u-e.gif" width="100%">
+  <a href="https://meganpai.github.io/are-u-what-u-eat/" target="blank">https://meganpai.github.io/are-u-what-u-eat/</a>
+  <img src="Images/Are-You-What-You-Eat/*u-ate-what-u-were.jpg" width="100%"></img>
+  <p class="caption">Experiment A, 01</p>
+  <img src="Images/Are-You-What-You-Eat/are-u-what-u-eat.jpg" width="100%">
+  <p class="caption">Experiment A, 02</p>
+  <img src="Images/Are-You-What-You-Eat/are-u-what-u-eat2.jpg" width="100%">
+  <p class="caption">Experiment A, 03</p>
+  <img src="Images/Are-You-What-You-Eat/are-u-what-u-eat3.jpg" width="100%">
+  <p class="caption">Experiment A, 04</p>
+  <img src="Images/Are-You-What-You-Eat/are-u-what-u-eat4.jpg" width="100%">
+  <p class="caption">Experiment A, 05</p>
+  <img src="Images/Are-You-What-You-Eat/are-u-what-u-eat5.jpg" width="100%">
+  <p class="caption">Experiment A, 06</p>
+  <img src="Images/Are-You-What-You-Eat/are-u-what-u-eat6.jpg" width="100%">
+  <p class="caption">Experiment A, 07</p>
+  <img src="Images/Are-You-What-You-Eat/are-u-what-u-eat7.jpg" width="100%">
+  <p class="caption">Experiment A, 08</p>
+  <img src="Images/Are-You-What-You-Eat/are-u-what-u-eat8.jpg" width="100%">
+  <p class="caption">Experiment A, 09</p>
+  <img src="Images/Are-You-What-You-Eat/are-u-what-u-eat9.jpg" width="100%">
+  <p class="caption">Experiment A, 10</p>
+  <img src="Images/Are-You-What-You-Eat/are-u-what-u-eat10.jpg" width="100%">
+  <p class="caption">Experiment A, 11</p>
+  <img src="Images/Are-You-What-You-Eat/are-u-what-u-eat11.jpg" width="100%">
+  <p class="caption">Experiment A, 12</p>
+  <img src="Images/Are-You-What-You-Eat/are-u-what-u-eat12.jpg" width="100%">
+  <p class="caption">Experiment A, 13</p>
+  <img src="Images/Are-You-What-You-Eat/are-u-what-u-eat13.jpg" width="100%">
+  <p class="caption">Experiment A, 14</p>
+  <img src="Images/Are-You-What-You-Eat/are-u-what-u-eat14.jpg" width="100%">
+  <p class="caption">Experiment A, 15</p>
+  <img src="Images/Are-You-What-You-Eat/are-u-what-u-eat15.jpg" width="100%">
+  <p class="caption">Experiment A, 16</p>
+  <img src="Images/Are-You-What-You-Eat/are-u-what-u-eat16.jpg" width="100%">
+  <p class="caption">Experiment A, 17</p>
+  <img src="Images/Are-You-What-You-Eat/are-u-what-u-eat17.jpg" width="100%">
+  <p class="caption">Experiment A, 18</p>
+  <img src="Images/Are-You-What-You-Eat/are-u-what-u-eat18.jpg" width="100%">
+  <p class="caption">Experiment A, 19</p>
+  <img src="Images/Are-You-What-You-Eat/are-u-what-u-eat19.jpg" width="100%">
+  <p class="caption">Experiment A, 20</p>
+  <img src="Images/Are-You-What-You-Eat/are-u-what-u-eat20.jpg" width="100%">
+  <p class="caption">Experiment A, 21</p>
+  <img src="Images/Are-You-What-You-Eat/are-u-what-u-eat21.jpg" width="100%">
+  <p class="caption">Experiment A, 22</p>
+  <img src="Images/Are-You-What-You-Eat/are-u-what-u-eat22.jpg" width="100%">
+  <p class="caption">Experiment A, 23</p>
+  <img src="Images/Are-You-What-You-Eat/are-u-what-u-eat23.jpg" width="100%">
+  <p class="caption">Experiment A, 24</p>
+  <img src="Images/Are-You-What-You-Eat/are-u-what-u-eat24.jpg" width="100%">
+  <p class="caption">Experiment A, 25</p>
+  <img src="Images/Are-You-What-You-Eat/are-u-what-u-eat25.jpg" width="100%">
+  <p class="caption">Experiment A, 26</p>
+  <img src="Images/Are-You-What-You-Eat/are-u-what-u-eat26.jpg" width="100%">
+  <p class="caption">Experiment A, 27</p>
+  <img src="Images/Are-You-What-You-Eat/*strawb1.jpg" width="100%">
+  <p class="caption">Experiment B</p>
+  <img src="Images/Are-You-What-You-Eat/*strawb2.jpg" width="100%">
+  <img src="Images/Are-You-What-You-Eat/*strawb3.jpg" width="100%">
+  <img src="Images/Are-You-What-You-Eat/*strawb4.jpg" width="100%">
+  <img src="Images/Are-You-What-You-Eat/*jelly1.jpg" width="100%">
+  <img src="Images/Are-You-What-You-Eat/*jelly2.jpg" width="100%">
+  <img src="Images/Are-You-What-You-Eat/*jelly3.jpg" width="100%">
+  <img src="Images/Are-You-What-You-Eat/*jelly4.jpg" width="100%">
+  <img src="Images/Are-You-What-You-Eat/*jelly5.jpg" width="100%">
+  <img src="Images/Are-You-What-You-Eat/*jelly6.jpg" width="100%">
+  <video width=100% id=vid-1 loop muted>
+    <source src="Images/Are-You-What-You-Eat/*jelly.mp4" type="video/mp4">
+    <source src="Images/Are-You-What-You-Eat/*jelly.ogg" type="video/ogg">
+  </video>
+  <script>
+    document.getElementById('vid-1').play();
+  </script>
+
+</div>
+<div class="graphic-design">
+  <h2>The Original</h2>
+  <h3 class="sticky"><mark>Print_Publication__2020__7.5x7.5''__575_pages________________________</mark></h3>
+  <br><br>
+  <img src="Images/The-Original/The-Original.jpg" width="100%">
+  <p class="caption"><a href="Images/The-Original/The-Original.pdf" target="blank">PDF</a></p>
+  <img src="Images/The-Original/brownie-book.jpg" width="100%">
+  <p class="caption">Heavy chunk of brownie with an excerpt of Sontag inside</p>
+  <img src="Images/The-Original/*brownie-b.png" width="100%"></img>
+  <img src="Images/The-Original/*brownie-a.png" width="100%"></img>
+  <img src="Images/The-Original/*brownie-c.jpg" width="100%"></img>
+  <div class="square"></div>
+  <img src="Images/The-Original/cover.jpg" width="100%"></img>
+  <img src="Images/The-Original/The-Original2.jpg" width="100%"></img>
+  <img src="Images/The-Original/The-Original3.jpg" width="100%"></img>
+  <img src="Images/The-Original/The-Original4.jpg" width="100%"></img>
+  <img src="Images/The-Original/The-Original5.jpg" width="100%"></img>
+  <img src="Images/The-Original/The-Original6.jpg" width="100%"></img>
+  <img src="Images/The-Original/The-Original7.jpg" width="100%"></img>
+  <img src="Images/The-Original/The-Original8.jpg" width="100%"></img>
+  <img src="Images/The-Original/The-Original9.jpg" width="100%"></img>
+  <img src="Images/The-Original/The-Original18.jpg" width="100%"></img>
+  <img src="Images/The-Original/The-Original19.jpg" width="100%"></img>
+  <img src="Images/The-Original/The-Original20.jpg" width="100%"></img>
+  <img src="Images/The-Original/The-Original21.jpg" width="100%"></img>
+  <img src="Images/The-Original/The-Original22.jpg" width="100%"></img>
+  <img src="Images/The-Original/The-Original23.jpg" width="100%"></img>
+  <img src="Images/The-Original/The-Original24.jpg" width="100%"></img>
+  <img src="Images/The-Original/The-Original25.jpg" width="100%"></img>
+  <img src="Images/The-Original/The-Original26.jpg" width="100%"></img>
+  <img src="Images/The-Original/The-Original27.jpg" width="100%"></img>
+  <img src="Images/The-Original/The-Original28.jpg" width="100%"></img>
+  <img src="Images/The-Original/The-Original29.jpg" width="100%"></img>
+  <img src="Images/The-Original/The-Original30.jpg" width="100%"></img>
+  <img src="Images/The-Original/The-Original31.jpg" width="100%"></img>
+  <img src="Images/The-Original/The-Original32.jpg" width="100%"></img>
+  <img src="Images/The-Original/The-Original33.jpg" width="100%"></img>
+  <img src="Images/The-Original/The-Original34.jpg" width="100%"></img>
+  <img src="Images/The-Original/The-Original35.jpg" width="100%"></img>
+  <img src="Images/The-Original/The-Original36.jpg" width="100%"></img>
+  <img src="Images/The-Original/The-Original37.jpg" width="100%"></img>
+  <img src="Images/The-Original/The-Original38.jpg" width="100%"></img>
+  <img src="Images/The-Original/The-Original39.jpg" width="100%"></img>
+  <img src="Images/The-Original/The-Original40.jpg" width="100%"></img>
+  <img src="Images/The-Original/The-Original41.jpg" width="100%"></img>
+  <img src="Images/The-Original/The-Original42.jpg" width="100%"></img>
+  <img src="Images/The-Original/The-Original43.jpg" width="100%"></img>
+  <img src="Images/The-Original/The-Original44.jpg" width="100%"></img>
+  <img src="Images/The-Original/The-Original45.jpg" width="100%"></img>
+  <img src="Images/The-Original/The-Original46.jpg" width="100%"></img>
+  <img src="Images/The-Original/The-Original47.jpg" width="100%"></img>
+  <img src="Images/The-Original/The-Original48.jpg" width="100%"></img>
+  <img src="Images/The-Original/The-Original49.jpg" width="100%"></img>
+  <img src="Images/The-Original/The-Original50.jpg" width="100%"></img>
+  <img src="Images/The-Original/The-Original51.jpg" width="100%"></img>
+  <img src="Images/The-Original/The-Original52.jpg" width="100%"></img>
+  <img src="Images/The-Original/The-Original53.jpg" width="100%"></img>
+  <img src="Images/The-Original/The-Original54.jpg" width="100%"></img>
+  <img src="Images/The-Original/The-Original55.jpg" width="100%"></img>
+  <img src="Images/The-Original/The-Original56.jpg" width="100%"></img>
+  <img src="Images/The-Original/The-Original57.jpg" width="100%"></img>
+</div>
+<div class="graphic-design">
+  <h2>Meditation Space</h2>
+  <h3 class="sticky"><mark>Architecture__2020__Renovation_Design_____________________________</mark></h3>
+  <br><br>
+  <img src="Images/Meditation-Space/*base.jpg" width="100%"></img>
+  <p class="caption">Junior Studio project under the instruction of Elisa Silva</p>
+  <p class="text">
+    Lock 8 along the Delaware and Raritan Canal is marked by the Kingston Canal House, a non-insulated structure of roughly 450 square-feet with an accompanying wooden shed. This proposed renovation to the site which was once a shelter for the bridge tender involves the construction of a public space for meditation, encouraging visitors to pause in the same spirit as the activity along the canal. Just as the swing bridges located along the canal served as a responsive metric for the assortment of vessels moving through the passage, the renovation will likewise produce a collection of spaces that caters to a diverse public. A single underground complex will fill the space beneath the existing structure, connecting a series of cells varying in depth, temperature, and lighting conditions to promote an awareness of the environment and the body.
+  </p>
+  <br><br>
+  <img src="Images/Meditation-Space/*int-b.jpg" width="100%"></img>
+  <img src="Images/Meditation-Space/*int-a.jpg" width="100%"></img>
+  <img src="Images/Meditation-Space/a_site-plan.png" width="100%"></img>
+  <p class="caption">Site Plan</p>
+  <img src="Images/Meditation-Space/b_plans-1.png" width="100%"></img>
+  <p class="caption">Ground Plan</p>
+  <img src="Images/Meditation-Space/b_plans-2.png" width="100%"></img>
+  <p class="caption">Underground Plan</p>
+  <img src="Images/Meditation-Space/footprint-a.jpg" width="100%"></img>
+  <img src="Images/Meditation-Space/footprint-b.jpg" width="100%"></img>
+  <img src="Images/Meditation-Space/hot-cold.jpg" width="100%"></img>
+  <p class="caption">Hot and Cold Cellss</p>
+  <img src="Images/Meditation-Space/c_elevations-1.png" width="100%"></img>
+  <p class="caption">Front and Back Elevations</p>
+  <img src="Images/Meditation-Space/c_elevations-2.png" width="100%"></img>
+  <p class="caption">Longitudinal Section</p>
+  <img src="Images/Meditation-Space/d_transverse-sections.png" width="100%"></img>
+  <p class="caption">Transverse Sections</p>
+  <img src="Images/Meditation-Space/e2_axo.png" width="100%"></img>
+  <img src="Images/Meditation-Space/e1_axo.png" width="100%"></img>
+  <p class="caption">Exploded Axonometric</p>
+  <img src="Images/Meditation-Space/*int-d.jpg" width="100%"></img>
+  <img src="Images/Meditation-Space/*int-e.jpg" width="100%"></img>
+  <img src="Images/Meditation-Space/model.jpg" width="100%"></img>
+</div>
+<div class="graphic-design">
+  <h2 class="title-exception">Loam<p class="hidden">________________<p class="asterisk">*</p></h2>
+  <h3 class="sticky"><mark>Font_in_Progress__2020___________________________________________</mark></h3>
+  <br><br>
+  <img src="Images/Loam/A.png" width="100%"></img>
+  <img src="Images/Loam/B_1.png" width="100%"></img>
+  <img src="Images/Loam/C.png" width="100%"></img>
+  <img src="Images/Loam/D.png" width="100%"></img>
+  <img src="Images/Loam/E_1.png" width="100%"></img>
+  <img src="Images/Loam/F.png" width="100%"></img>
+  <img src="Images/Loam/G.png" width="100%"></img>
+  <img src="Images/Loam/H_2.png" width="100%"></img>
+  <img src="Images/Loam/I.png" width="100%"></img>
+  <img src="Images/Loam/J_1.png" width="100%"></img>
+  <img src="Images/Loam/K_2.png" width="100%"></img>
+  <img src="Images/Loam/L.png" width="100%"></img>
+  <img src="Images/Loam/M.png" width="100%"></img>
+  <img src="Images/Loam/N.png" width="100%"></img>
+  <img src="Images/Loam/O_2.png" width="100%"></img>
+  <img src="Images/Loam/P.png" width="100%"></img>
+</div>
+<div class="graphic-design">
+  <h2>Lamp</h2>
+  <h3 class="sticky"><mark>Digital__2020___________________________________________________</mark></h3>
+  <br><br>
+  <img src="Images/Lamp/lamp-4.gif" width="100%"></img>
+  <div class="square"></div>
+  <img src="Images/Lamp/lamp-2.jpg" width="100%"></img>
+  <img src="Images/Lamp/lamp-3.gif" width="100%"></img>
+  <img src="Images/Lamp/lamp-flicker.gif" width="100%"></img>
+</div>
+<div class="graphic-design">
+  <h2>Rice Clock</h2>
+  <h3 class="sticky"><mark>Clock__2020_____________________________________________________</mark></h3>
+  <br><br>
+  <img src="Images/Rice-Clock/RICE-CLOCK.gif" width="100%"></img>
+  <p class="caption"><a href="https://meganpai.github.io/rice-clock/" target="blank">https://meganpai.github.io/rice-clock/</a></p>
+  <p class="text">
+    This clock runs on an 18-minute loop. Use it as a timer for cooking rice, or as a new and improved method for increasing your productivity, à la <a href="https://en.wikipedia.org/wiki/Pomodoro_Technique" target="blank">Pomodoro</a>.
+  </p>
+</div>
+<div class="graphic-design">
+  <h2>Sponge</h2>
+  <h3 class="sticky"><mark>Print_Publication__2020__166_pages_________________________________</mark></h3>
+  <br><br>
+  <img src="Images/Sponge/book-1.jpg" width="100%">
+  <p class="caption"><a href="Images/Sponge/Sponge-Book.pdf" target="blank">PDF</a></p>
+  <p class="text">
+    Design, publish, and disperse a book as an archive. The book will be an image reader. It will contain images as its primary content, with text allowed only as captions. The book will reveal—through its reading—a coherent idea of a collection of images that are bound together through shared metadata. Metadata will generate a design idea and a material book design.
+  </p>
+  <br><br>
+  <img src="Images/Sponge/*SPONGE-COVER*.jpg" width="100%">
+  <img src="Images/Sponge/exclusion.png" width="100%">
+  <p class="caption">Cover</p>
+  <div class="square"></div>
+  <img src="Images/Sponge/high-cleansing-honey.png" width="100%">
+  <p class="caption">"High Cleansing Honey"</p>
+  <img src="Images/Sponge/soft-baby-bath.png" width="100%">
+  <p class="caption">"Soft Baby Bath"</p>
+  <img src="Images/Sponge/Sponge-spreads2.jpg" width="100%">
+  <img src="Images/Sponge/Sponge-spreads3.jpg" width="100%">
+  <img src="Images/Sponge/Sponge-spreads4.jpg" width="100%">
+  <img src="Images/Sponge/Sponge-spreads5.jpg" width="100%">
+  <img src="Images/Sponge/Sponge-spreads6.jpg" width="100%">
+  <img src="Images/Sponge/Sponge-spreads7.jpg" width="100%">
+  <img src="Images/Sponge/Sponge-spreads8.jpg" width="100%">
+  <img src="Images/Sponge/Sponge-spreads9.jpg" width="100%">
+  <img src="Images/Sponge/Sponge-spreads10.jpg" width="100%">
+  <img src="Images/Sponge/Sponge-spreads11.jpg" width="100%">
+  <img src="Images/Sponge/Sponge-spreads12.jpg" width="100%">
+  <img src="Images/Sponge/Sponge-spreads13.jpg" width="100%">
+  <img src="Images/Sponge/Sponge-spreads14.jpg" width="100%">
+  <img src="Images/Sponge/Sponge-spreads15.jpg" width="100%">
+  <img src="Images/Sponge/Sponge-spreads16.jpg" width="100%">
+  <img src="Images/Sponge/Sponge-spreads17.jpg" width="100%">
+  <img src="Images/Sponge/Sponge-spreads18.jpg" width="100%">
+  <img src="Images/Sponge/Sponge-spreads19.jpg" width="100%">
+  <img src="Images/Sponge/Sponge-spreads20.jpg" width="100%">
+  <img src="Images/Sponge/Sponge-spreads21.jpg" width="100%">
+  <img src="Images/Sponge/Sponge-spreads22.jpg" width="100%">
+  <img src="Images/Sponge/Sponge-spreads23.jpg" width="100%">
+  <img src="Images/Sponge/Sponge-spreads24.jpg" width="100%">
+  <img src="Images/Sponge/Sponge-spreads25.jpg" width="100%">
+  <img src="Images/Sponge/Sponge-spreads26.jpg" width="100%">
+  <img src="Images/Sponge/Sponge-spreads27.jpg" width="100%">
+  <img src="Images/Sponge/Sponge-spreads28.jpg" width="100%">
+  <img src="Images/Sponge/Sponge-spreads29.jpg" width="100%">
+  <img src="Images/Sponge/Sponge-spreads30.jpg" width="100%">
+  <img src="Images/Sponge/Sponge-spreads83.jpg" width="100%">
+  <img src="Images/Sponge/Sponge-spreads84.jpg" width="100%">
+</div>
+
+
+
+<div class="photography">
+  <h2>Desert</h2>
+  <h3 class="sticky"><mark class="photography-mark">Digital__2020__Anza_Borrego_________________________________________________________________________________________________________________________________</mark></h3>
+  <br><br>
+  <img src="Images/Desert/couch-1.jpg" width="100%">
+  <img src="Images/Desert/performance-1.jpg" width="100%">
+  <img src="Images/Desert/boxes-1.jpg" width="100%">
+  <img src="Images/Desert/boxes-2.jpg" width="100%">
+  <img src="Images/Desert/carlees-2.jpg" width="100%">
+  <img src="Images/Desert/signs-3.jpg" width="100%">
+  <img src="Images/Desert/signs-4.jpg" width="100%">
+  <img src="Images/Desert/signs-5.jpg" width="100%">
+  <img src="Images/Desert/curtain-2.jpg" width="100%">
+</div>
+<div class="photography">
+  <h2>Wonderland</h2>
+  <h3 class="sticky"><mark class="photography-mark">Digital__2019__San_Diego____________________________________________________________________________________________________________________________________</mark></h3>
+  <br><br>
+  <img src="Images/Wonderland/*mall-1.jpg" width="100%">
+  <img src="Images/Wonderland/*mall-2.jpg" width="100%">
+  <img src="Images/Wonderland/*mall-3.jpg" width="100%">
+  <img src="Images/Wonderland/*mall-4.jpg" width="100%">
+  <img src="Images/Wonderland/*palm-1.jpg" width="100%">
+  <img src="Images/Wonderland/*mall-5.jpg" width="100%">
+  <img src="Images/Wonderland/*palm-2.jpg" width="100%">
+  <img src="Images/Wonderland/*mall-6.jpg" width="100%">
+  <img src="Images/Wonderland/*palm-3.jpg" width="100%">
+  <img src="Images/Wonderland/*mall-7.jpg" width="100%">
+</div>
+<div class="photography">
+  <h2>Burbia</h2>
+  <h3 class="sticky"><mark class="photography-mark">Digital__2019__San_Diego____________________________________________________________________________________________________________________________________</mark></h3>
+  <br><br>
+  <img src="Images/Burbia/6770PO.jpg" width="100%">
+  <img src="Images/Burbia/6770.jpg" width="100%">
+  <img src="Images/Burbia/Turvy.jpg" width="100%">
+  <img src="Images/Burbia/MD.jpg" width="100%">
+  <img src="Images/Burbia/Wetzels.jpg" width="100%">
+  <img src="Images/Burbia/Angel.jpg" width="100%">
+  <img src="Images/Burbia/Women.jpg" width="100%">
+  <img src="Images/Burbia/Women-2.jpg" width="100%">
+  <img src="Images/Burbia/truck.jpg" width="100%">
+  <img src="Images/Burbia/Bonsai.jpg" width="100%">
+  <img src="Images/Burbia/Dreamy.jpg" width="100%">
+</div>
+<div class="photography">
+  <h2>Presidio</h2>
+  <h3 class="sticky"><mark class="photography-mark">Digital__2019__San_Diego____________________________________________________________________________________________________________________________________</mark></h3>
+  <br><br>
+  <img src="Images/Presidio/Arch1_2.jpg" width="33%">
+  <img style="display:inline;" src="Images/Presidio/Portrait3.jpg" width="33%">
+  <img style="display:inline;" src="Images/Presidio/Arch2.jpg" width="33%">
+  <img src="Images/Presidio/Fountain_NoCrop.jpg" width="100%">
+  <img src="Images/Presidio/Grid1_2.jpg" width="100%">
+  <img style="display:inline;" src="Images/Presidio/Sit.jpg" width="49%">
+  <p style="display:inline; font-size:20px; color:white;"> * </p>
+  <img style="display:inline;" src="Images/Presidio/Ded.jpg" width="49%">
+  <img style="display:inline;" src="Images/Presidio/Palm1_2.jpg" width="33%">
+  <img style="display:inline;" src="Images/Presidio/Long1_2.jpg" width="33%">
+  <img style="display:inline;" src="Images/Presidio/Back.jpg" width="33%">
+</div>
+<div class="photography">
+  <h2>Quiet Things</h2>
+  <h3 class="sticky"><mark class="photography-mark">Digital__2018-2019__Still_Life_________________________________________________________________________________________________________________________________</mark></h3>
+  <br><br>
+  <img src="Images/Quiet-Things/Sweet2.jpg" width="49%">
+  <p style="display:inline; font-size:20px;"> * </p>
+  <img tyle="display:inline;" src="Images/Quiet-Things/Sweet1.jpg" width="49%">
+  <img src="Images/Quiet-Things/StillLife1.jpg" width="100%">
+  <img src="Images/Quiet-Things/StillLife2.jpg" width="100%">
+  <img src="Images/Quiet-Things/StillLife3.jpg" width="100%">
+  <img src="Images/Quiet-Things/CD.jpg" width="100%">
+  <img src="Images/Quiet-Things/Clip.jpg" width="100%">
+  <img src="Images/Quiet-Things/Rubble.jpg" width="100%">
+</div>
+<div class="photography">
+  <h2>C-41</h2>
+  <h3 class="sticky"><mark class="photography-mark">Color_Film__2018-2020__35mm_and_Medium_Format_____________________________________________________________________________________________________________</mark></h3>
+  <br><br>
+  <img src="Images/C-41/market2.jpg" width="100%">
+  <img src="Images/C-41/market1.jpg" width="100%">
+  <img src="Images/C-41/market3.jpg" width="100%">
+  <img src="Images/C-41/market5.jpg" width="100%">
+  <img src="Images/C-41/mansion-2.jpg" width="100%">
+  <img src="Images/C-41/mission-beach-1.jpg" width="100%">
+  <img src="Images/C-41/mission-beach-2.jpg" width="100%">
+  <img src="Images/C-41/mission-beach-3.jpg" width="100%">
+  <img src="Images/C-41/mission-beach-4.jpg" width="100%">
+  <img src="Images/C-41/mission-beach-5.jpg" width="100%">
+</div>
+<div class="photography">
+  <h2>Party of One</h2>
+  <h3 class="sticky"><mark class="photography-mark">Digital__2019__San_Diego____________________________________________________________________________________________________________________________________</mark></h3>
+  <br><br>
+  <img src="Images/Party-of-One/BunnyLove2.jpg" width="100%">
+  <img src="Images/Party-of-One/Collar1.jpg" width="100%">
+  <img src="Images/Party-of-One/Glass1.jpg" width="100%">
+  <img src="Images/Party-of-One/Sleepy1.jpg" width="100%">
+</div>
+<div class="photography">
+  <h2>Private Matters</h2>
+  <h3 class="sticky"><mark class="photography-mark">Scanned_Negatives__2019____________________________________________________________________________________________________________________________________</mark></h3>
+  <br><br>
+  <img src="Images/Private-Matters/Break2.jpg" width="100%">
+  <img src="Images/Private-Matters/Mistake_Sea2.jpg" width="100%">
+  <img src="Images/Private-Matters/Blue.jpg" width="100%">
+</div>
+<div class="photography">
+  <h2>Dark Room</h2>
+  <h3 class="sticky"><mark class="photography-mark">Digital__2020__San_Diego____________________________________________________________________________________________________________________________________</mark></h3>
+  <br><br>
+  <img src="Images/Dark-Room/red-window-7.jpg" width="49%">
+  <p style="display:inline; font-size:20px;"> * </p>
+  <img style="display:inline;" src="Images/Dark-Room/red-window-9.jpg" width="49%">
+  <img src="Images/Dark-Room/across-2.jpg" width="100%">
+  <img src="Images/Dark-Room/across-4.jpg" width="100%">
+  <img src="Images/Dark-Room/across-1.jpg" width="100%">
+  <img src="Images/Dark-Room/our-house-3.jpg" width="100%">
+  <img src="Images/Dark-Room/red-window-6.jpg" width="100%">
+</div>
+<div class="photography">
+  <h2>Silver</h2>
+  <h3 class="sticky"><mark class="photography-mark">Black_and_White_Film__2018-2020__35mm_and_Medium_Format___________________________________________________________________________________________________</mark></h3>
+  <br><br>
+  <img src="Images/Silver/couch-1.jpg" width="100%">
+  <img src="Images/Silver/couch-2.jpg" width="100%">
+  <img src="Images/Silver/couch-3.jpg" width="100%">
+  <img src="Images/Silver/05.jpg" width="100%">
+  <img src="Images/Silver/06.jpg" width="100%">
+  <img src="Images/Silver/04.jpg" width="100%">
+  <img src="Images/Silver/JAN014.jpg" width="100%">
+  <img src="Images/Silver/interim2.jpg" width="100%">
+  <img src="Images/Silver/interim3.jpg" width="100%">
+  <img src="Images/Silver/interim1.jpg" width="100%">
+  <img src="Images/Silver/HongKong1.jpg" width="100%">
+  <img src="Images/Silver/Stairs01.jpg" width="100%">
+  <img src="Images/Silver/Suburbia_Negative1.jpg" width="100%">
+  <img src="Images/Silver/Suburbia2.jpg" width="100%">
+  <img src="Images/Silver/Suburbia1.jpg" width="100%">
+  <img src="Images/Silver/Suburbia3.jpg" width="100%">
+  <img src="Images/Silver/Lita1.jpg" width="100%">
+  <img src="Images/Silver/pton-round-2-14.jpg" width="100%">
+  <img src="Images/Silver/pton-round-2-22.jpg" width="100%">
+  <img src="Images/Silver/pton-round-2-24.jpg" width="100%">
+  <img src="Images/Silver/pton-round-2-23.jpg" width="100%">
+  <img src="Images/Silver/Tecate1.jpg" width="100%">
+  <img src="Images/Silver/Tecate2.jpg" width="100%">
+  <img src="Images/Silver/03.jpg" width="100%">
+  <img src="Images/Silver/Japan.jpg" width="100%">
+  <img src="Images/Silver/ZionMarket.jpg" width="100%">
+</div>
+
+
+
+<div class="film">
+  <h2>Aisthetikos</h2>
+  <h3 class="sticky"><mark class="film-mark">Digital__2018__Short_Film____________________________________________________________________________________________________________________________________</mark></h3>
+  <br><br>
+  <img src="Images/Aisthetikos/sun.png" width="100%">
+  <p class="text">
+    Aisthetikos offers an interpretation of art and its methods. Formal, temporal, and auditory distortions invoke a shift in the viewer’s desire to consume the image. Objectivity, and perceptions of function and beauty are lost in the awakening of sense perception.
+  </p>
+  <video loop muted width=100% id=vid-2>
+    <source src="Images/Aisthetikos/AISTHETIKOS.mp4" type="video/mp4">
+    <source src="Images/Aisthetikos/AISTHETIKOS.ogg" type="video/ogg">
+  </video>
+  <script>
+    document.getElementById('vid-2').play();
+  </script>
+  <p class="caption"><a href="https://www.youtube.com/watch?v=gY3_uFe3bfQ&feature=emb_title">With Sound</a></p>
+  <div class="square"></div>
+  <img src="Images/Aisthetikos/pear.png" width="100%">
+  <img src="Images/Aisthetikos/melon.png" width="100%">
+  <img src="Images/Aisthetikos/focus.png" width="100%">
+  <img src="Images/Aisthetikos/perception.png" width="100%">
+  <img src="Images/Aisthetikos/cover.png" width="100%">
+</div>
+<div class="film">
+  <h2>Nice Juicy Apple</h2>
+  <h3 class="sticky"><mark class="film-mark">Digital__2018__Short_Film____________________________________________________________________________________________________________________________________</mark></h3>
+  <br><br>
+  <img src="Images/NJA/nja1.png" width="49%">
+  <p style="display:inline; font-size:20px"> * </p>
+  <img style="display:inline;" src="Images/NJA/nja2.png" width="49%">
+  <div class="square"></div>
+  <video width=100% id=vid-3 loop muted>
+    <source src="Images/NJA/NJA_July2018.mp4" type="video/mp4">
+    <source src="Images/NJA/NJA_July2018.ogg" type="video/ogg">
+  </video>
+  <script>
+    document.getElementById('vid-3').play();
+  </script>
+  <p class="caption"><a href="https://www.youtube.com/watch?v=r6hN-Ucng_Q&feature=emb_title">With Sound</a></p>
+</div>
+<div class="film">
+  <h2>City Collage: Hong Kong</h2>
+  <h3 class="sticky"><mark class="film-mark">Digital__2019__Short_Film____________________________________________________________________________________________________________________________________</mark></h3>
+  <br><br>
+  <img src="Images/City-Collage/cc1.png" width="49%">
+  <p style="display:inline; font-size:20px; color:white;"> * </p>
+  <img style="display:inline" src="Images/City-Collage/cc2.png" width="49%">
+  <video width=100% id=vid-4 loop muted>
+    <source src="Images/City-Collage/*CITY-COLLAGE_HK.mp4" type="video/mp4">
+    <source src="Images/City-Collage/*CITY-COLLAGE_HK.ogg" type="video/ogg">
+  </video>
+  <script>
+    document.getElementById('vid-4').play();
+  </script>
+  <p class="caption"><a href="https://www.youtube.com/watch?v=svnf5EVZFgE&feature=emb_title">With Sound</a></p>
+</div>
+
+
+
+<div class="archive">
+  <h2>Posters</h2>
+  <h3 class="sticky"><mark class="archive-mark">Miscellaneous__Print__2018-2020__Princeton_New_Jersey______________</mark></h3>
+  <br><br>
+  <img src="Images/*ARCHIVE/Pton/Final_HCD.png" width="100%">
+  <img src="Images/*ARCHIVE/Pton/MMD.png" width="100%">
+  <p class="caption">Spring Design Workshop Series hosted by Princeton University Student Design Agency</p>
+  <img src="Images/*ARCHIVE/Pton/nass-1 copy.png" width="100%">
+  <img src="Images/*ARCHIVE/Pton/nass-2 copy.png" width="100%">
+  <img src="Images/*ARCHIVE/Pton/nass-3 copy.png" width="100%">
+  <img src="Images/*ARCHIVE/Pton/nass-4 copy.png" width="100%">
+  <p class="caption">Princeton University Nassau Literary Review call for submissions</p>
+  <img src="Images/*ARCHIVE/Pton/nlr-green-fb.png" width="100%">
+  <img src="Images/*ARCHIVE/Pton/nlr-winter-launch.jpg" width="100%">
+  <img src="Images/*ARCHIVE/Pton/nlr-winter-launch-fb.jpg" width="100%">
+  <p class="caption">Princeton University Nassau Literary Review winter launch</p>
+  <img src="Images/*ARCHIVE/Pton/PCC_RentRunway_Poster" width="100%">
+  <p class="caption">Princeton Creators Collective Guest Lecture</p>
+</div>
+<div class="archive">
+  <h2>Scribe</h2>
+  <h3 class="sticky"><mark class="archive-mark">Print_Publication__2017-2018______________________________________</mark></h3>
+  <br><br>
+  <img src="Images/*ARCHIVE/Scribe/scribe1.png" width="100%">
+<p class="text">
+  The Scribe is the official Columbia Schoalstic Press Association gold-award-winning student-run news magazine fo Francis Parker School, printed and distributed five times a year.
+</p>
+  <img src="Images/*ARCHIVE/Scribe/scribe2.png" width="100%">
+  <img src="Images/*ARCHIVE/Scribe/scribe3.png" width="100%">
+  <img src="Images/*ARCHIVE/Scribe/scribe4.png" width="100%">
+  <img src="Images/*ARCHIVE/Scribe/scribe5.png" width="100%">
+  <img src="Images/*ARCHIVE/Scribe/scribe6.png" width="100%">
+  <img src="Images/*ARCHIVE/Scribe/scribe7.png" width="100%">
+  <img src="Images/*ARCHIVE/Scribe/scribe8.png" width="100%">
+  <img src="Images/*ARCHIVE/Scribe/scribe12.png" width="100%">
+  <img src="Images/*ARCHIVE/Scribe/scribe20.png" width="100%">
+  <img src="Images/*ARCHIVE/Scribe/scribe9.png" width="100%">
+  <img src="Images/*ARCHIVE/Scribe/scribe10.png" width="100%">
+  <img src="Images/*ARCHIVE/Scribe/scribe11.png" width="100%">
+  <img src="Images/*ARCHIVE/Scribe/scribe13.png" width="100%">
+  <img src="Images/*ARCHIVE/Scribe/scribe14.png" width="100%">
+  <img src="Images/*ARCHIVE/Scribe/scribe15.png" width="100%">
+  <img src="Images/*ARCHIVE/Scribe/scribe16.png" width="100%">
+  <img src="Images/*ARCHIVE/Scribe/scribe17.png" width="100%">
+  <img src="Images/*ARCHIVE/Scribe/scribe18.png" width="100%">
+  <img src="Images/*ARCHIVE/Scribe/scribe19.png" width="100%">
+  <img src="Images/*ARCHIVE/Scribe/scribe21.png" width="100%">
+  <img src="Images/*ARCHIVE/Scribe/scribe22.png" width="100%">
+  <img src="Images/*ARCHIVE/Scribe/scribe23.png" width="100%">
+  <img src="Images/*ARCHIVE/Scribe/scribe24.png" width="100%">
+  <img src="Images/*ARCHIVE/Scribe/scribe25.png" width="100%">
+  <img src="Images/*ARCHIVE/Scribe/scribe26.png" width="100%">
+  <img src="Images/*ARCHIVE/Scribe/scribe27.png" width="100%">
+  <img src="Images/*ARCHIVE/Scribe/scribe28.png" width="100%">
+  <img src="Images/*ARCHIVE/Scribe/scribe29.png" width="100%">
+</div>
+<div class="archive">
+  <h2>BEMA</h2>
+  <h3 class="sticky"><mark class="archive-mark">Print_Publication__2017-2018______________________________________</mark></h3>
+  <br><br>
+  <img src="Images/*ARCHIVE/BEMA/bema1.png" width="100%">
+  <p class="text">
+Bema is Francis Parker School’s literary arts magazine, containing a range of student work in poetry, prose, illustration, ceramics, and painting, printmaking, and photography. It is printed and distributed once a year.</p>
+  <img src="Images/*ARCHIVE/BEMA/bema2.png" width="100%">
+  <img src="Images/*ARCHIVE/BEMA/bema3.png" width="100%">
+  <img src="Images/*ARCHIVE/BEMA/bema4.png" width="100%">
+  <img src="Images/*ARCHIVE/BEMA/bema5.png" width="100%">
+  <img src="Images/*ARCHIVE/BEMA/bema6.png" width="100%">
+  <img src="Images/*ARCHIVE/BEMA/bema7.png" width="100%">
+  <img src="Images/*ARCHIVE/BEMA/bema8.png" width="100%">
+  <img src="Images/*ARCHIVE/BEMA/bema9.png" width="100%">
+  <img src="Images/*ARCHIVE/BEMA/bema10.png" width="100%">
+  <img src="Images/*ARCHIVE/BEMA/bema11.png" width="100%">
+  <img src="Images/*ARCHIVE/BEMA/bema12.png" width="100%">
+  <img src="Images/*ARCHIVE/BEMA/bema13.png" width="100%">
+  <img src="Images/*ARCHIVE/BEMA/bema14.png" width="100%">
+</div>
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+  <style>
+    table {
+      border-collapse:collapse;
+    }
+    th {
+      padding:0px;
+      vertical-align: baseline;
+      font-family:'Avara';
+      text-align:left;
+      width:1500px;
+    }
+    td {
+      width:1500px;
+      height:100px;
+      padding:0px;
+      vertical-align: baseline;
+      font-family:'Helvetica';
+      overflow:hidden;
+    }
+    p {
+      font-size:13px;
+    }
+    a {
+      font-family:'Helvetica';
+      color:gray;
+    }
+    mark {
+      background-color:blue;
+      color:white;
+    }
+    #th-1 {
+      font-size:17px;
+      font-style:italic;
+      vertical-align: top;
+      padding-top:17px;
+    }
+    .p-1 {
+      font-family:'Helvetica';
+      font-size:13px;
+      font-style:normal;
+      font-weight:normal;
+   }
+   .table-wrapper {
+     width:1777px;
+   }
+    .th-2 {
+      font-size:17px;
+      font-style:italic;
+      vertical-align: top;
+      padding-top:17px;
+    }
+  </style>
+<head/>
+
+
+
+<body>
+<div class="table-wrapper">
+  <table>
+    <tr>
+      <th id=th-1>Megan Pai<br><br>🐇</th>
+      <th> </th>
+      <th> </th>
+      <th class=th-2>Capsule<br><br><p class=p-1><mark>Print_2019__Princeton_NJ__5.5x8.5''__100_handbound_copies</mark></th>
+      <th class=th-2>Order of Operations</th>
+    </tr>
+
+content row
+    <tr>
+    <td>
+      For inquiries, please contact:
+        <br>
+        <a href="mailto:dear.mgn.pai@gmail.com" target="_blank">dear.mgn.pai@gmail.com</a>
+        <br><br>
+        <a href="https://www.instagram.com/mgnpai" target="_blank">ig</a>
+    </td>
+    <td>
+        <p> </p>
+    </td>
+    <td>
+        <p> </p>
+    </td>
+
+    <td>
+      <div id=right>
+        <img src="Images/Capsule/*COVER.jpg" width="100%">
+          <p>
+          CAPSULE was born out of a nucleus of creative isolation. Through a series of musical and artistic collisions, our orbits aligned in the vacuum of Princeton. The three of us shared a desire to channel our creative energies and passions—design, photography, writing, and art—into a concentrated project which we could then share with others. From conversations about sentient reactivity, cavities, and super entities, we arrived at CAPSULE.
+          <br><br>
+          CAPSULE is not a magazine, periodical, publication, journal, or newsletter, but rather precisely what the name suggests. It preserves the dynamic relationships between people and place. We document the stories of artists and their work, as we believe that self-identifying creatives have experiences which directly align with our mission. A place, defined as a space that has been modified/filled by/with people, occupies a central role in the process of the artist who occupies it. A symbiosis of person and place manifests as the artist generates content in reaction to what they experience.
+          <br><br>
+          We hope our work encourages greater mindfulness in perceiving and interacting with the spaces that surround our bodies. With the supersonic development of technology and the vast database of online media, our society has become increasingly desensitized to the alluring traces of brilliance in all things, blindly consuming images with haste. CAPSULE emerges as a counter-response to the contemporary state of media consumerism, to remind you (and ourselves) to appreciate actively. Allow this to inspire you to embrace life with greater vitality.
+        </p>
+        <br>
+        <img src="Images/Capsule/*INSIDE-COVER.jpg" width="100%">
+        <img src="Images/Capsule/*MIDDLE.jpg" width="100%">
+      </div>
+    </td>
+    <div>
+    <td>
+      <img src="Images/Order-of-Operations/*COVER.png" width=100%>
+        <p> </p>
+    </td>
+    </div>
+    </tr>
+  </table>
+</div>
+</body>
+
+</html>
+-->
